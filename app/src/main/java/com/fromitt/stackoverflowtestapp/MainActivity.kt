@@ -18,9 +18,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 */
 class MainActivity : AppCompatActivity(), ListAdapter.Listener {
 
-    var retrofit: Retrofit? = null
-    var wikiService: WikiService? = null
-    var adapter: ListAdapter? = null
+    private var retrofit: Retrofit? = null
+    private var wikiService: WikiService? = null
+    private var adapter: ListAdapter? = null
 
     private var viewModelJob = Job()
     private val viewModelScope = CoroutineScope(Dispatchers.Main + viewModelJob)
